@@ -2,4 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="file:/D:/Users/Javier/Documents/NetBeansProjects/SOA/SEP/src/java/entidad/lector/LectorWSDL.wsdl" uri="src/conf/xml-resources/web-services/LectorService/wsdl/LectorWSDL.wsdl"/>
     <system systemId="file:/D:/Users/Javier/Documents/NetBeansProjects/SOA/SEP/src/java/entidad/lector/LectorSchema.xsd" uri="src/conf/xml-resources/web-services/LectorService/wsdl/LectorSchema.xsd"/>
+    <system systemId="file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/SOA-SEP/src/java/entidad/clubDeLectura/ClubDeLecturaWSDL.wsdl" uri="src/conf/xml-resources/web-services/ClubDeLecturaService/wsdl/ClubDeLecturaWSDL.wsdl"/>
+    <system systemId="file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/SOA-SEP/src/java/entidad/clubDeLectura/ClubDeLecturaSchema.xsd" uri="src/conf/xml-resources/web-services/ClubDeLecturaService/wsdl/ClubDeLecturaSchema.xsd"/>
 </catalog>

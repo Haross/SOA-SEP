@@ -45,5 +45,24 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/org/netbeans/j2ee/wsdl/sep/lector/lectorwsdl"/>
         <delete dir="${build.generated.dir}/jax-wsCache/service/LectorService"/>
     </target>
-    <target name="wsimport-service-generate" depends="wsimport-service-LectorService"/>
+    <target name="wsimport-service-ClubDeLecturaService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/ClubDeLecturaService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/ClubDeLecturaService" destdir="${build.generated.dir}/jax-wsCache/service/ClubDeLecturaService" wsdl="${basedir}/${conf-dir}xml-resources/web-services/ClubDeLecturaService/wsdl/ClubDeLecturaWSDL.wsdl" catalog="catalog.xml" extension="true" verbose="true" fork="false" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/ClubDeLecturaService/wsdl/ClubDeLecturaWSDL.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/ClubDeLecturaService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/ClubDeLecturaService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/ClubDeLecturaService">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/ClubDeLecturaService/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-ClubDeLecturaService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/netbeans/j2ee/wsdl/soa_sep/clubdelectura/clubdelecturawsdl"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/ClubDeLecturaService"/>
+    </target>
+    <target name="wsimport-service-generate" depends="wsimport-service-LectorService, wsimport-service-ClubDeLecturaService"/>
 </project>

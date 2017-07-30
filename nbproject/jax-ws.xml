@@ -33,6 +33,38 @@
         </wsimport-option>
       </wsimport-options>
     </service>
+    <service name="ClubDeLecturaService">
+      <implementation-class>entidad.clubDeLectura.ClubDeLecturaService</implementation-class>
+      <wsdl-url>file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/SOA-SEP/src/java/entidad/clubDeLectura/ClubDeLecturaWSDL.wsdl</wsdl-url>
+      <local-wsdl-file>ClubDeLecturaWSDL.wsdl</local-wsdl-file>
+      <service-name>ClubDeLectura</service-name>
+      <port-name>ClubDeLecturaWSDLPort</port-name>
+      <package-name>org.netbeans.j2ee.wsdl.soa_sep.clubdelectura.clubdelecturawsdl</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <use-provider>false</use-provider>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </service>
   </services>
   <clients/>
   <jsr109>false</jsr109>
