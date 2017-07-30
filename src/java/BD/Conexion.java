@@ -65,17 +65,42 @@ public class Conexion {
         return null;
     }
     
-  /*  public ResultSet delete(String sentencia){
-        try {
-            int foovalue = 500;
-            Statement st = conn.createStatement();
-            int rowsDeleted = st.executeUpdate("DELETE FROM mytable WHERE columnfoo = ?");
-            System.out.println(rowsDeleted + " rows deleted");
-            st.close();
-        } catch (SQLException e) {
+    public boolean insertar(String query){
+        Statement stmt = null;
+        try{
+            stmt = conn.createStatement();
+            stmt.executeUpdate(query);
+            return true;
+        }catch(SQLException e){
+            System.out.println("Error insertar: "+e);
+            return false;
         }
-
-    }*/
+    }
+    
+    public boolean actualizar(String query){
+        Statement stmt = null;
+        try{
+            stmt = conn.createStatement();
+            stmt.executeUpdate(query);
+            return true;
+        }catch(SQLException e){
+            System.out.println("Error insertar: "+e);
+            return false;
+        }
+    
+    }
+    public boolean eliminar(String query){
+        Statement stmt = null;
+        try{
+            stmt = conn.createStatement();
+            stmt.executeUpdate(query);
+            return true;
+        }catch(SQLException e){
+            System.out.println("Error insertar: "+e);
+            return false;
+        }
+    
+    }
     
 
     
