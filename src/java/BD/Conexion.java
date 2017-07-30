@@ -64,8 +64,6 @@ public class Conexion {
                 System.out.print("Column 1 returned ");
                 System.out.println(rs.getString(1));
             }*/
-            rs.close();
-            st.close();
             return rs;
         } catch (SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);

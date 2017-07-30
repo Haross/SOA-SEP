@@ -46,7 +46,12 @@ public class LectorService {
         ResultSet rs = con.select(query);
         try {
             while(rs.next()){
-            return (Lector) rs;
+                Lector aux = new Lector();
+                aux.setNombre(rs.getString("nombre"));
+                aux.setUsuario(rs.getString("usuario"));
+                aux.setContrasena(rs.getString("contrasena"));
+
+            return aux;
             
          }
          rs.close();
