@@ -20,36 +20,44 @@ import java.util.logging.Logger;
  * @author Javier
  */
 public class Conexion {
-    Connection conn;
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-
-    public Conexion()  {
+    
+    
+    public Connection getConexion()  {
+         Connection conn = null;
         try{
         // URI dbUri = new URI("jdbc:postgresql://ec2-54-235-120-39.compute-1.amazonaws.com:5432/d6lbmjlsussr3b?sslmode=require&user=juvzhtttwxbugr&password=d604cc2437cc24c04726211041e12d9458bea7736a11e7d9f54b754050ed80f9");
-       
-            
-        URI dbUri = new URI("postgres://juvzhtttwxbugr:d604cc2437cc24c04726211041e12d9458bea7736a11e7d9f54b754050ed80f9@ec2-54-235-120-39.compute-1.amazonaws.com:5432/d6lbmjlsussr3b");
+       Class.forName("org.postgresql.Driver");
+         URI dbUri = new URI(System.getenv("DATABASE_URL"));
       
-        String username = dbUri.getUserInfo().split(":")[0];
-        String password = dbUri.getUserInfo().split(":")[1];
-        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+    
+    String username = dbUri.getUserInfo().split(":")[0];
+    String password = dbUri.getUserInfo().split(":")[1];
+    String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
 
-        conn =  DriverManager.getConnection(dbUrl, username, password);
+     conn = DriverManager.getConnection(dbUrl, username, password);
         if(conn == null){
             System.out.println("fallo");
+            
         }else{
             System.out.println("exito");
         }
         }catch(URISyntaxException | SQLException e){
             System.out.println("error: "+e);
+            return null;
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println("Conexión exito");
+        
+       return conn;
     }
     
     public ResultSet select(String sentencia){
         
        // ResultSet rs = st.executeQuery("SELECT * FROM mytable WHERE columnfoo = 500");
         ResultSet rs;
-        try {
+         Connection conn = getConexion();
+       try {
             Statement st = conn.createStatement();
             rs = st.executeQuery(sentencia);
             /*while (rs.next()) {
@@ -66,6 +74,7 @@ public class Conexion {
     }
     
     public boolean insertar(String query){
+        Connection conn = getConexion();
         Statement stmt = null;
         try{
             stmt = conn.createStatement();
@@ -78,6 +87,7 @@ public class Conexion {
     }
     
     public boolean actualizar(String query){
+        Connection conn = getConexion();
         Statement stmt = null;
         try{
             stmt = conn.createStatement();
@@ -90,6 +100,7 @@ public class Conexion {
     
     }
     public boolean eliminar(String query){
+        Connection conn = getConexion();
         Statement stmt = null;
         try{
             stmt = conn.createStatement();
