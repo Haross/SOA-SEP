@@ -64,5 +64,43 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/org/netbeans/j2ee/wsdl/soa_sep/clubdelectura/clubdelecturawsdl"/>
         <delete dir="${build.generated.dir}/jax-wsCache/service/ClubDeLecturaService"/>
     </target>
-    <target name="wsimport-service-generate" depends="wsimport-service-LectorService, wsimport-service-ClubDeLecturaService"/>
+    <target name="wsimport-service-AspiranteService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/AspiranteService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/AspiranteService" destdir="${build.generated.dir}/jax-wsCache/service/AspiranteService" wsdl="${basedir}/${conf-dir}xml-resources/web-services/AspiranteService/wsdl/AspiranteWSDL.wsdl" catalog="catalog.xml" extension="true" verbose="true" fork="false" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/AspiranteService/wsdl/AspiranteWSDL.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/AspiranteService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/AspiranteService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/AspiranteService">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/AspiranteService/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-AspiranteService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/netbeans/j2ee/wsdl/soa_sep/aspirante/aspirantewsdl"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/AspiranteService"/>
+    </target>
+    <target name="wsimport-service-PublicarService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/PublicarService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/PublicarService" destdir="${build.generated.dir}/jax-wsCache/service/PublicarService" wsdl="${basedir}/${conf-dir}xml-resources/web-services/PublicarService/wsdl/PublicarWSDL.wsdl" catalog="catalog.xml" extension="true" verbose="true" fork="false" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/PublicarService/wsdl/PublicarWSDL.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/PublicarService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/PublicarService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/PublicarService">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/PublicarService/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-PublicarService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/netbeans/j2ee/wsdl/soa_sep/publicar/publicarwsdl"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/PublicarService"/>
+    </target>
+    <target name="wsimport-service-generate" depends="wsimport-service-LectorService, wsimport-service-ClubDeLecturaService, wsimport-service-AspiranteService, wsimport-service-PublicarService"/>
 </project>

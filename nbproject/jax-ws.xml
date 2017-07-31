@@ -65,6 +65,70 @@
         </wsimport-option>
       </wsimport-options>
     </service>
+    <service name="AspiranteService">
+      <implementation-class>entidad.aspirante.AspiranteService</implementation-class>
+      <wsdl-url>file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/SOA-SEP/src/java/entidad/aspirante/AspiranteWSDL.wsdl</wsdl-url>
+      <local-wsdl-file>AspiranteWSDL.wsdl</local-wsdl-file>
+      <service-name>AspiranteWSDLService</service-name>
+      <port-name>AspiranteWSDLPort</port-name>
+      <package-name>org.netbeans.j2ee.wsdl.soa_sep.aspirante.aspirantewsdl</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <use-provider>false</use-provider>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </service>
+    <service name="PublicarService">
+      <implementation-class>utilitarios.Publicar.PublicarService</implementation-class>
+      <wsdl-url>file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/SOA-SEP/src/java/utilitarios/Publicar/PublicarWSDL.wsdl</wsdl-url>
+      <local-wsdl-file>PublicarWSDL.wsdl</local-wsdl-file>
+      <service-name>PublicarWSDLService</service-name>
+      <port-name>PublicarWSDLPort</port-name>
+      <package-name>org.netbeans.j2ee.wsdl.soa_sep.publicar.publicarwsdl</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <use-provider>false</use-provider>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </service>
   </services>
   <clients/>
   <jsr109>false</jsr109>

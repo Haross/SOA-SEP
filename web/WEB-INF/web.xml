@@ -13,6 +13,16 @@
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>AspiranteWSDLService</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>PublicarWSDLService</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Lector</servlet-name>
         <url-pattern>/Lector</url-pattern>
@@ -20,6 +30,14 @@
     <servlet-mapping>
         <servlet-name>ClubDeLectura</servlet-name>
         <url-pattern>/ClubDeLectura</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AspiranteWSDLService</servlet-name>
+        <url-pattern>/AspiranteWSDLService</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PublicarWSDLService</servlet-name>
+        <url-pattern>/PublicarWSDLService</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
