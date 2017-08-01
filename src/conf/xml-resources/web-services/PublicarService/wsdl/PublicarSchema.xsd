@@ -48,7 +48,7 @@ made subject to such option by the copyright holder.
     xmlns:tns="http://xml.netbeans.org/schema/PublicarSchema"
     elementFormDefault="qualified">
     <xsd:complexType name="Capacitaciones">
-        <xsd:sequence>
+        <xsd:sequence maxOccurs="1">
             <xsd:element name="folio" type="xsd:string"/>
             <xsd:element name="nombre" type="xsd:string"/>
             <xsd:element name="tipo" type="xsd:string"/>
@@ -58,14 +58,24 @@ made subject to such option by the copyright holder.
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ClubDeLectura">
-        <xsd:sequence>
+        <xsd:sequence maxOccurs="1">
             <xsd:element name="nombre" type="xsd:string"/>
             <xsd:element name="cupo" type="xsd:int"/>
             <xsd:element name="tematica" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
+    <xsd:complexType name="capacitacion">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="listaCapacitaciones" type="tns:Capacitaciones"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="club">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="listaClub" type="tns:ClubDeLectura"/>
+        </xsd:sequence>
+    </xsd:complexType>
     <xsd:element name="tipo" type="xsd:int"/>
     <xsd:element name="tipoClub" type="xsd:int"/>
-    <xsd:element name="capacitacionesType" type="tns:Capacitaciones"/>
-    <xsd:element name="clubType" type="tns:ClubDeLectura"/>
+    <xsd:element name="capacitacionesType" type="tns:capacitacion"/>
+    <xsd:element name="clubType" type="tns:club"/>
 </xsd:schema>

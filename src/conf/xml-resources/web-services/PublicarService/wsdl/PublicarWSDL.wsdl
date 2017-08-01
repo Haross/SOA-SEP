@@ -51,22 +51,22 @@ made subject to such option by the copyright holder.
             <xsd:import namespace="http://xml.netbeans.org/schema/PublicarSchema" schemaLocation="PublicarSchema.xsd"/>
         </xsd:schema>
     </types>
-    <message name="PublicarCapacitacionRequest">
+    <message name="PublicarCapacitacionesRequest">
         <part name="tipo" element="ns:tipo"/>
     </message>
-    <message name="PublicarCapacitacionResponse">
-        <part name="capacitaciones" element="ns:capacitacionesType"/>
+    <message name="PublicarCapacitacionesResponse">
+        <part name="capacitacion" element="ns:capacitacionesType"/>
     </message>
     <message name="PublicarClubRequest">
-        <part name="tipoClub" element="ns:tipoClub"/>
+        <part name="tipoC" element="ns:tipoClub"/>
     </message>
     <message name="PublicarClubResponse">
-        <part name="clubes" element="ns:clubType"/>
+        <part name="club" element="ns:clubType"/>
     </message>
     <portType name="PublicarWSDLPortType">
         <operation name="PublicarCapacitacion">
-            <input name="input1" message="tns:PublicarCapacitacionRequest"/>
-            <output name="output1" message="tns:PublicarCapacitacionResponse"/>
+            <input name="input1" message="tns:PublicarCapacitacionesRequest"/>
+            <output name="output1" message="tns:PublicarCapacitacionesResponse"/>
         </operation>
         <operation name="PublicarClub">
             <input name="input2" message="tns:PublicarClubRequest"/>
@@ -84,7 +84,7 @@ made subject to such option by the copyright holder.
                 <soap:body use="literal"/>
             </output>
         </operation>
-        <operation name="PublicarClub">
+         <operation name="PublicarClub">
             <soap:operation/>
             <input name="input2">
                 <soap:body use="literal"/>
