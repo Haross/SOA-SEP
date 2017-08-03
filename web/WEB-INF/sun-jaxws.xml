@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
   <endpoint implementation="entidad.lector.LectorService" name="Lector" url-pattern="/Lector"/>
-  <endpoint implementation="entidad.clubDeLectura.ClubDeLecturaService" name="ClubDeLectura" url-pattern="/ClubDeLectura"/>
   <endpoint implementation="entidad.aspirante.AspiranteService" name="AspiranteWSDLService" url-pattern="/AspiranteWSDLService"/>
   <endpoint implementation="utilitarios.Publicar.PublicarService" name="PublicarWSDLService" url-pattern="/PublicarWSDLService"/>
+  <endpoint implementation="entidad.clubDeLectura.ClubDeLecturaService" name="ClubDeLecturaWSDLService" url-pattern="/ClubDeLecturaWSDLService"/>
 </endpoints>

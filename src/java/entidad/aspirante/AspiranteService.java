@@ -26,7 +26,13 @@ public class AspiranteService {
         folio = r.nextInt(100000)+1;
         String query = "insert into aspirante VALUES ('"+aspirante.getNombre()+"','"+aspirante.getApellidos()+"', '"+aspirante.getFecha()+"', '"+aspirante.getCurp()+"', '"+aspirante.getEmail()+"', '"+aspirante.getTelefono()+"', '"+folio+"'); ";
         boolean estatus = con.insertar(query);
-        return folio;
+        if (estatus){
+            System.out.println("Registro exitoso");
+            return folio;
+        }else{
+            System.out.println("No se pudo registrar");
+            return 0;  
+        }
     }
 
     public org.netbeans.xml.schema.aspiranteschema.Aspirante consultaAspirante(int folioA) {

@@ -52,7 +52,7 @@ made subject to such option by the copyright holder.
     <xsd:element name="clubRegistrarType" type="tns:Club"/>
     <xsd:element name="estatusEliminarType" type="xsd:boolean"/>
     <xsd:element name="estatusActualizarType" type="xsd:boolean"/>
-    <xsd:element name="estatusRegistroType" type="xsd:boolean"/>
+    <xsd:element name="estatusRegistroType" type="xsd:string"/>
     <xsd:element name="clubActualizarType" type="tns:Club"/>
     <xsd:element name="clubConsultarType" type="xsd:string"/>
     <xsd:element name="nombreType" type="xsd:string"/>

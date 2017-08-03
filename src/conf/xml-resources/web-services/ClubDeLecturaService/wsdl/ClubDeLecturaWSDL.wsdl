@@ -51,7 +51,7 @@ made subject to such option by the copyright holder.
             <xsd:import namespace="http://xml.netbeans.org/schema/ClubDeLecturaSchema" schemaLocation="ClubDeLecturaSchema.xsd"/>
         </xsd:schema>
     </types>
-    <message name="RegistrarClubRequest">
+     <message name="RegistrarClubRequest">
         <part name="clubR" element="ns:clubRegistrarType"/>
     </message>
     <message name="RegistrarClubResponse">
@@ -131,11 +131,10 @@ made subject to such option by the copyright holder.
                 <soap:body use="literal"/>
             </output>
         </operation>
-        
     </binding>
-    <service name="ClubDeLectura">
+    <service name="ClubDeLecturaWSDLService">
         <port name="ClubDeLecturaWSDLPort" binding="tns:ClubDeLecturaWSDLBinding">
-            <soap:address location="http://localhost:${HttpDefaultPort}/RegistroClubDeLectura/ClubDeLecturaWSDLPort"/>
+            <soap:address location="http://localhost:${HttpDefaultPort}/ClubDeLecturaWSDLService/ClubDeLecturaWSDLPort"/>
         </port>
     </service>
     <plnk:partnerLinkType name="ClubDeLecturaWSDL">

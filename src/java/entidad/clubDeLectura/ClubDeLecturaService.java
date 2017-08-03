@@ -15,14 +15,17 @@ import org.netbeans.xml.schema.clubdelecturaschema.Club;
  *
  * @author Josseline Arreola
  */
-@WebService(serviceName = "ClubDeLectura", portName = "ClubDeLecturaWSDLPort", endpointInterface = "org.netbeans.j2ee.wsdl.soa_sep.clubdelectura.clubdelecturawsdl.ClubDeLecturaWSDLPortType", targetNamespace = "http://j2ee.netbeans.org/wsdl/SOA-SEP/clubDeLectura/ClubDeLecturaWSDL", wsdlLocation = "WEB-INF/wsdl/ClubDeLecturaService/ClubDeLecturaWSDL.wsdl")
+@WebService(serviceName = "ClubDeLecturaWSDLService", portName = "ClubDeLecturaWSDLPort", endpointInterface = "org.netbeans.j2ee.wsdl.soa_sep.clubdelectura.clubdelecturawsdl.ClubDeLecturaWSDLPortType", targetNamespace = "http://j2ee.netbeans.org/wsdl/SOA-SEP/clubDeLectura/ClubDeLecturaWSDL", wsdlLocation = "WEB-INF/wsdl/ClubDeLecturaService/ClubDeLecturaWSDL.wsdl")
 public class ClubDeLecturaService {
 
-    public boolean registroClubDeLectura(org.netbeans.xml.schema.clubdelecturaschema.Club clubR) {
+    public java.lang.String registroClubDeLectura(org.netbeans.xml.schema.clubdelecturaschema.Club clubR) {
         Conexion con = new Conexion();
         String query = "insert into clublectura VALUES ('"+clubR.getNombre()+"','"+clubR.getCupo()+"', '"+clubR.getTematica()+"')";
         boolean estatus = con.insertar(query);
-        return estatus;
+        if (estatus)
+            return "El registro fue exitoso";
+        else
+            return "Registro no exitoso. El nombre ya existe";
     }
 
     public org.netbeans.xml.schema.clubdelecturaschema.Club consultarClubDeLectura(java.lang.String clubC) {
