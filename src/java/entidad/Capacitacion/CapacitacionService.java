@@ -24,9 +24,10 @@ public class CapacitacionService {
         String query = "select * from capacitaciones where nombre = '"+nombre+"';";
             ResultSet rs = con.select(query);
             try {
-                Capacitaciones aux = new Capacitaciones();
+                
                 CapacitacionNom c = new CapacitacionNom();
                 while(rs.next()){
+                    Capacitaciones aux = new Capacitaciones();
                     aux.setFolio(rs.getString("folio"));
                     aux.setNombre(rs.getString("nombre"));
                     aux.setTipo(rs.getString("tipo"));
@@ -46,9 +47,10 @@ public class CapacitacionService {
        String query = "select * from capacitaciones where tipo = '"+tipo+"';";
             ResultSet rs = con.select(query);
             try {
-                Capacitaciones aux = new Capacitaciones();
+                
                 Capacitacion c = new Capacitacion();
                 while(rs.next()){
+                    Capacitaciones aux = new Capacitaciones();
                     aux.setFolio(rs.getString("folio"));
                     aux.setNombre(rs.getString("nombre"));
                     aux.setTipo(rs.getString("tipo"));

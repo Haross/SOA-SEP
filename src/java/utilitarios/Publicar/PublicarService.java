@@ -27,9 +27,10 @@ public class PublicarService {
             String query = "select * from capacitaciones;";
             ResultSet rs = con.select(query);
             try {
-                Capacitaciones aux = new Capacitaciones();
+                
                 Capacitacion c = new Capacitacion();
                 while(rs.next()){
+                    Capacitaciones aux = new Capacitaciones();
                     aux.setFolio(rs.getString("folio"));
                     aux.setNombre(rs.getString("nombre"));
                     aux.setTipo(rs.getString("tipo"));
@@ -56,9 +57,10 @@ public class PublicarService {
             String query = "select * from clublectura;";
             ResultSet rs = con.select(query);
             try {
-                ClubDeLectura aux = new ClubDeLectura();
+                
                 Club c = new Club();
                 while(rs.next()){
+                    ClubDeLectura aux = new ClubDeLectura();
                     aux.setNombre(rs.getString("nombre"));
                     aux.setCupo(rs.getInt("cupo"));
                     aux.setTematica(rs.getString("tematica"));
