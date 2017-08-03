@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
 import javax.jws.WebService;
-import org.netbeans.xml.schema.capacitacionschema.Capacitaciones;
+import org.netbeans.xml.schema.capacitacionesschema.Capacitaciones;
 
 /**
  *
@@ -19,8 +19,8 @@ import org.netbeans.xml.schema.capacitacionschema.Capacitaciones;
 @WebService(serviceName = "CapacitacionesWSDL", portName = "CapacitacionesWSDLPort", endpointInterface = "org.netbeans.j2ee.wsdl.soa_sep.capacitaciones.capacitacioneswsdl.CapacitacionesWSDLPortType", targetNamespace = "http://j2ee.netbeans.org/wsdl/SOA-SEP/capacitaciones/CapacitacionesWSDL", wsdlLocation = "WEB-INF/wsdl/CapacitacionesWSDL/CapacitacionesWSDL.wsdl")
 public class CapacitacionesWSDL {
 
-    public boolean capacitacionesWSDL(org.netbeans.xml.schema.capacitacionschema.Capacitaciones datos) {
-        Conexion con = new Conexion();
+    public boolean capacitacionesWSDL(org.netbeans.xml.schema.capacitacionesschema.Capacitaciones datos) {
+         Conexion con = new Conexion();
         int folio=0;
         Random r = new Random();
         folio =r.nextInt(100000)+1;
@@ -30,12 +30,9 @@ public class CapacitacionesWSDL {
         return estatus;
     }
 
-    /**
-     * Web service operation
-     */
-    public Capacitaciones ConsultaWSDL(String Nombre) {
-       Conexion con = new Conexion();
-        String query = "select * from capacitaciones where nombre = '"+Nombre+"';";
+    public org.netbeans.xml.schema.capacitacionesschema.Capacitaciones consultaWSDL(java.lang.String nombre) {
+         Conexion con = new Conexion();
+        String query = "select * from capacitaciones where nombre = '"+nombre+"';";
         ResultSet rs = con.select(query);
         try {
             while(rs.next()){
@@ -57,7 +54,5 @@ public class CapacitacionesWSDL {
             
         return null;
     }
-    
-    
     
 }

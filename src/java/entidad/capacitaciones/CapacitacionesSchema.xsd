@@ -44,10 +44,9 @@ made subject to such option by the copyright holder.
 -->
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://xml.netbeans.org/schema/CapacitacionSchema"
-    xmlns:tns="http://xml.netbeans.org/schema/CapacitacionSchema"
+            targetNamespace="http://xml.netbeans.org/schema/CapacitacionesSchema"
+    xmlns:tns="http://xml.netbeans.org/schema/CapacitacionesSchema"
     elementFormDefault="qualified">
-    
     <xsd:complexType name="Capacitaciones">
         <xsd:sequence>
             <xsd:element name="folio" type="xsd:string"/>
@@ -62,5 +61,4 @@ made subject to such option by the copyright holder.
     <xsd:element name="EstatusCapacitacion" type="xsd:boolean"/>
     <xsd:element name="ConsultaCapacitacion" type="tns:Capacitaciones"/>
     <xsd:element name="NombreConsulta" type="xsd:string"/>
-
 </xsd:schema>
