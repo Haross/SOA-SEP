@@ -102,5 +102,43 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/org/netbeans/j2ee/wsdl/soa_sep/clubdelectura/clubdelecturawsdl"/>
         <delete dir="${build.generated.dir}/jax-wsCache/service/ClubDeLecturaService"/>
     </target>
-    <target name="wsimport-service-generate" depends="wsimport-service-LectorService, wsimport-service-AspiranteService, wsimport-service-PublicarService, wsimport-service-ClubDeLecturaService"/>
+    <target name="wsimport-service-NotificacionWSDL" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/NotificacionWSDL"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/NotificacionWSDL" destdir="${build.generated.dir}/jax-wsCache/service/NotificacionWSDL" wsdl="${basedir}/${conf-dir}xml-resources/web-services/NotificacionWSDL/wsdl/NotificacionWSDL.wsdl" catalog="catalog.xml" extension="true" verbose="true" fork="false" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/NotificacionWSDL/wsdl/NotificacionWSDL.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/NotificacionWSDL"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/NotificacionWSDL">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/NotificacionWSDL">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/NotificacionWSDL/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-NotificacionWSDL" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/netbeans/j2ee/wsdl/soa_sep/notificacion/notificacionwsdl"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/NotificacionWSDL"/>
+    </target>
+    <target name="wsimport-service-CapacitacionesWSDL" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/CapacitacionesWSDL"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/CapacitacionesWSDL" destdir="${build.generated.dir}/jax-wsCache/service/CapacitacionesWSDL" wsdl="${basedir}/${conf-dir}xml-resources/web-services/CapacitacionesWSDL/wsdl/CapacitacionesWSDL.wsdl" catalog="catalog.xml" extension="true" verbose="true" fork="false" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/CapacitacionesWSDL/wsdl/CapacitacionesWSDL.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/CapacitacionesWSDL"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/CapacitacionesWSDL">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/CapacitacionesWSDL">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/CapacitacionesWSDL/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-CapacitacionesWSDL" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/netbeans/j2ee/wsdl/soa_sep/capacitaciones/capacitacioneswsdl"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/CapacitacionesWSDL"/>
+    </target>
+    <target name="wsimport-service-generate" depends="wsimport-service-LectorService, wsimport-service-AspiranteService, wsimport-service-PublicarService, wsimport-service-ClubDeLecturaService, wsimport-service-NotificacionWSDL, wsimport-service-CapacitacionesWSDL"/>
 </project>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+
+Copyright 2009-2017 Oracle and/or its affiliates. All rights reserved.
+
+Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+The contents of this file are subject to the terms of either the GNU
+General Public License Version 2 only ("GPL") or the Common
+Development and Distribution License("CDDL") (collectively, the
+"License"). You may not use this file except in compliance with the
+License. You can obtain a copy of the License at
+http://www.netbeans.org/cddl-gplv2.html
+or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
+specific language governing permissions and limitations under the
+License.  When distributing the software, include this License Header
+Notice in each file and include the License file at
+nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
+particular file as subject to the "Classpath" exception as provided
+by Oracle in the GPL Version 2 section of the License file that
+accompanied this code. If applicable, add the following below the
+License Header, with the fields enclosed by brackets [] replaced by
+your own identifying information:
+"Portions Copyrighted [year] [name of copyright owner]"
+
+Contributor(s):
+
+The Original Software is NetBeans. The Initial Developer of the Original
+Software is Sun Microsystems, Inc. Portions Copyright 2009-2010 Sun
+Microsystems, Inc. All Rights Reserved.
+
+If you wish your version of this file to be governed by only the CDDL
+or only the GPL Version 2, indicate your decision by adding
+"[Contributor] elects to include this software in this distribution
+under the [CDDL or GPL Version 2] license." If you do not indicate a
+single choice of license, a recipient has the option to distribute
+your version of this file under either the CDDL, the GPL Version 2 or
+to extend the choice of license to its licensees as provided above.
+However, if you add GPL Version 2 code and therefore, elected the GPL
+Version 2 license, then the option applies only if the new code is
+made subject to such option by the copyright holder.
+-->
+<definitions name="CapacitacionesWSDL" targetNamespace="http://j2ee.netbeans.org/wsdl/SOA-SEP/capacitaciones/CapacitacionesWSDL"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/SOA-SEP/capacitaciones/CapacitacionesWSDL" xmlns:ns="http://xml.netbeans.org/schema/CapacitacionesSchema" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <types>
+        <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/SOA-SEP/capacitaciones/CapacitacionesWSDL">
+            <xsd:import namespace="http://xml.netbeans.org/schema/CapacitacionesSchema" schemaLocation="CapacitacionesSchema.xsd"/>
+        </xsd:schema>
+    </types>
+    <message name="CapacitacionesWSDLRequest">
+        <part name="RegistroC" element="ns:RegistroCapacitacion"/>
+    </message>
+    <message name="CapacitacionesWSDLResponse">
+        <part name="RegistroEstatus" element="ns:EstatusCapacitacion"/>
+    </message>
+    <message name="ConsultaWSDLRequest">
+        <part name="NombreConsulta" element="ns:NombreConsulta"/>
+    </message>
+    <message name="ConsultaWSDLResponse">
+        <part name="Capacitaciones" element="ns:ConsultaCapacitacion"/>
+    </message>
+    <message name="ConsultaWSDL"/>
+    <message name="ConsultaWSDLResponse"/>
+    <portType name="CapacitacionesWSDLPortType">
+        <operation name="CapacitacionesWSDL">
+            <input name="input1" message="tns:CapacitacionesWSDLRequest"/>
+            <output name="output1" message="tns:CapacitacionesWSDLResponse"/>
+        </operation>
+        <operation name="ConsultaWSDL">
+            <input name="input2" message="tns:ConsultaWSDLRequest"/>
+            <output name="output2" message="tns:ConsultaWSDLResponse"/>
+        </operation>
+        <operation name="ConsultaWSDL">
+            <input message="tns:ConsultaWSDL"/>
+            <output message="tns:ConsultaWSDLResponse"/>
+        </operation>
+    </portType>
+    <binding name="CapacitacionesWSDLBinding" type="tns:CapacitacionesWSDLPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="CapacitacionesWSDL">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="ConsultaWSDL">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="CapacitacionesWSDL">
+        <port name="CapacitacionesWSDLPort" binding="tns:CapacitacionesWSDLBinding">
+            <soap:address location="http://localhost:${HttpDefaultPort}/CapacitacionesWSDL/CapacitacionesWSDLPort"/>
+        </port>
+    </service>
+    <plnk:partnerLinkType name="CapacitacionesWSDL">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="CapacitacionesWSDLPortTypeRole" portType="tns:CapacitacionesWSDLPortType"/>
+    </plnk:partnerLinkType>
+</definitions>

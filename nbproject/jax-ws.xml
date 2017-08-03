@@ -129,6 +129,70 @@
         </wsimport-option>
       </wsimport-options>
     </service>
+    <service name="NotificacionWSDL">
+      <implementation-class>utilitarios.Notificacion.NotificacionWSDL</implementation-class>
+      <wsdl-url>file:/C:/Users/Jesus/Documents/NetBeansProjects/SOA-SEP/src/java/utilitarios/Notificacion/NotificacionWSDL.wsdl</wsdl-url>
+      <local-wsdl-file>NotificacionWSDL.wsdl</local-wsdl-file>
+      <service-name>NotificacionWSDL</service-name>
+      <port-name>NotificacionWSDLPort</port-name>
+      <package-name>org.netbeans.j2ee.wsdl.soa_sep.notificacion.notificacionwsdl</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <use-provider>false</use-provider>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </service>
+    <service name="CapacitacionesWSDL">
+      <implementation-class>entidad.capacitaciones.CapacitacionesWSDL</implementation-class>
+      <wsdl-url>file:/C:/Users/Jesus/Documents/NetBeansProjects/SOA-SEP/src/java/entidad/capacitaciones/CapacitacionesWSDL.wsdl</wsdl-url>
+      <local-wsdl-file>CapacitacionesWSDL.wsdl</local-wsdl-file>
+      <service-name>CapacitacionesWSDL</service-name>
+      <port-name>CapacitacionesWSDLPort</port-name>
+      <package-name>org.netbeans.j2ee.wsdl.soa_sep.capacitaciones.capacitacioneswsdl</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <use-provider>false</use-provider>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </service>
   </services>
   <clients/>
   <jsr109>false</jsr109>

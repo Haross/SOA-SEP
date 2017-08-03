@@ -8,4 +8,8 @@
     <system systemId="file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/SOA-SEP/src/java/utilitarios/Publicar/PublicarSchema.xsd" uri="src/conf/xml-resources/web-services/PublicarService/wsdl/PublicarSchema.xsd"/>
     <system systemId="file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/SOA-SEP/src/java/entidad/clubDeLectura/ClubDeLecturaWSDL.wsdl" uri="src/conf/xml-resources/web-services/ClubDeLecturaService/wsdl/ClubDeLecturaWSDL.wsdl"/>
     <system systemId="file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/SOA-SEP/src/java/entidad/clubDeLectura/ClubDeLecturaSchema.xsd" uri="src/conf/xml-resources/web-services/ClubDeLecturaService/wsdl/ClubDeLecturaSchema.xsd"/>
+    <system systemId="file:/C:/Users/Jesus/Documents/NetBeansProjects/SOA-SEP/src/java/utilitarios/Notificacion/NotificacionWSDL.wsdl" uri="src/conf/xml-resources/web-services/NotificacionWSDL/wsdl/NotificacionWSDL.wsdl"/>
+    <system systemId="file:/C:/Users/Jesus/Documents/NetBeansProjects/SOA-SEP/src/java/utilitarios/Notificacion/NotificacionSchema.xsd" uri="src/conf/xml-resources/web-services/NotificacionWSDL/wsdl/NotificacionSchema.xsd"/>
+    <system systemId="file:/C:/Users/Jesus/Documents/NetBeansProjects/SOA-SEP/src/java/entidad/capacitaciones/CapacitacionesWSDL.wsdl" uri="src/conf/xml-resources/web-services/CapacitacionesWSDL/wsdl/CapacitacionesWSDL.wsdl"/>
+    <system systemId="file:/C:/Users/Jesus/Documents/NetBeansProjects/SOA-SEP/src/java/entidad/capacitaciones/CapacitacionesSchema.xsd" uri="src/conf/xml-resources/web-services/CapacitacionesWSDL/wsdl/CapacitacionesSchema.xsd"/>
 </catalog>

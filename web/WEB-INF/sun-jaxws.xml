@@ -4,4 +4,6 @@
   <endpoint implementation="entidad.aspirante.AspiranteService" name="AspiranteWSDLService" url-pattern="/AspiranteWSDLService"/>
   <endpoint implementation="utilitarios.Publicar.PublicarService" name="PublicarWSDLService" url-pattern="/PublicarWSDLService"/>
   <endpoint implementation="entidad.clubDeLectura.ClubDeLecturaService" name="ClubDeLecturaWSDLService" url-pattern="/ClubDeLecturaWSDLService"/>
+  <endpoint implementation="utilitarios.Notificacion.NotificacionWSDL" name="NotificacionWSDL" url-pattern="/NotificacionWSDL"/>
+  <endpoint implementation="entidad.capacitaciones.CapacitacionesWSDL" name="CapacitacionesWSDL" url-pattern="/CapacitacionesWSDL"/>
 </endpoints>
