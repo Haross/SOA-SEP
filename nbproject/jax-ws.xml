@@ -161,13 +161,13 @@
         </wsimport-option>
       </wsimport-options>
     </service>
-    <service name="CapacitacionesWSDL">
-      <implementation-class>entidad.capacitaciones.CapacitacionesWSDL</implementation-class>
-      <wsdl-url>file:/C:/Users/Jesus/Documents/NetBeansProjects/SOA-SEP/src/java/entidad/capacitaciones/CapacitacionesWSDL.wsdl</wsdl-url>
-      <local-wsdl-file>CapacitacionesWSDL.wsdl</local-wsdl-file>
-      <service-name>CapacitacionesWSDL</service-name>
-      <port-name>CapacitacionesWSDLPort</port-name>
-      <package-name>org.netbeans.j2ee.wsdl.soa_sep.capacitaciones.capacitacioneswsdl</package-name>
+    <service name="CapacitacionService">
+      <implementation-class>entidad.Capacitacion.CapacitacionService</implementation-class>
+      <wsdl-url>file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/Final/SOA-SEP/src/java/entidad/Capacitacion/CapacitacionWSDL.wsdl</wsdl-url>
+      <local-wsdl-file>CapacitacionWSDL.wsdl</local-wsdl-file>
+      <service-name>CapacitacionWSDLService</service-name>
+      <port-name>CapacitacionWSDLPort</port-name>
+      <package-name>org.netbeans.j2ee.wsdl.soa_sep.capacitacion.capacitacionwsdl</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <use-provider>false</use-provider>
       <wsimport-options>

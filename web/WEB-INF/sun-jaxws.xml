@@ -6,4 +6,5 @@
   <endpoint implementation="entidad.clubDeLectura.ClubDeLecturaService" name="ClubDeLecturaWSDLService" url-pattern="/ClubDeLecturaWSDLService"/>
   <endpoint implementation="utilitarios.Notificacion.NotificacionWSDL" name="NotificacionWSDL" url-pattern="/NotificacionWSDL"/>
   <endpoint implementation="entidad.capacitaciones.CapacitacionesWSDL" name="CapacitacionWSDL" url-pattern="/CapacitacionWSDL"/>
+  <endpoint implementation="entidad.Capacitacion.CapacitacionService" name="CapacitacionWSDLService" url-pattern="/CapacitacionWSDLService"/>
 </endpoints>
