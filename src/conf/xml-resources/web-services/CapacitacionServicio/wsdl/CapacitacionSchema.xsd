@@ -67,7 +67,15 @@ made subject to such option by the copyright holder.
             <xsd:element name="listaNombre" type="tns:Capacitaciones"/>
         </xsd:sequence>
     </xsd:complexType>
+    <xsd:complexType name="solicitudCapacitacion">
+        <xsd:sequence>
+            <xsd:element name="usuario" type="xsd:string"/>
+            <xsd:element name="folioCapacitacion" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
     <xsd:element name="capacitacionesType" type="tns:capacitacion"/>
+    <xsd:element name="solicitudType" type="tns:solicitudCapacitacion"/>
+    <xsd:element name="mensaje" type="xsd:string"/>
     <xsd:element name="capacitacionesNombre" type="tns:capacitacionNom"/>
     <xsd:element name="nombre" type="xsd:string"/>
     <xsd:element name="tipo" type="xsd:string"/>

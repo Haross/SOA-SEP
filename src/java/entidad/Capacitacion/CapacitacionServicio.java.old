@@ -21,7 +21,7 @@ import org.netbeans.xml.schema.capacitacionschema.Capacitaciones;
 public class CapacitacionServicio {
 Conexion con = new Conexion();
     public org.netbeans.xml.schema.capacitacionschema.CapacitacionNom capacitacionNombre(java.lang.String nombre) {
-       String query = "select * from capacitaciones where nombre = '"+nombre+"';";
+        String query = "select * from capacitaciones where nombre = '"+nombre+"';";
             ResultSet rs = con.select(query);
             try {
                 
@@ -64,17 +64,6 @@ Conexion con = new Conexion();
                 System.out.println("error: "+e);
                 return null;
     }
-    }
-
-    public java.lang.String solicitarCapacitacion(org.netbeans.xml.schema.capacitacionschema.SolicitudCapacitacion solicitud) {
-         Conexion con = new Conexion();
-        String query = "insert into solicitudCapacitaciones VALUES ('"+solicitud.getUsuario()+"','"+solicitud.getFolioCapacitacion()+"')";
-        boolean estatus = con.insertar(query);
-        if(estatus){
-            return "Registro exitoso";
-        }else{
-            return "error en conexión";
-        }
     }
     
 }

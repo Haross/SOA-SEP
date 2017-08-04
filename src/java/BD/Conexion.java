@@ -64,6 +64,11 @@ public class Conexion {
                 System.out.print("Column 1 returned ");
                 System.out.println(rs.getString(1));
             }*/
+            if (conn != null) {
+        try {
+            conn.close();
+        } catch (SQLException e) { /* ignored */}
+    }
             return rs;
         } catch (SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
@@ -77,6 +82,11 @@ public class Conexion {
         try{
             stmt = conn.createStatement();
             stmt.executeUpdate(query);
+            if (conn != null) {
+        try {
+            conn.close();
+        } catch (SQLException e) { /* ignored */}
+    }
             return true;
         }catch(SQLException e){
             System.out.println("Error insertar: "+e);
@@ -90,6 +100,11 @@ public class Conexion {
         try{
             stmt = conn.createStatement();
             stmt.executeUpdate(query);
+            if (conn != null) {
+        try {
+            conn.close();
+        } catch (SQLException e) { /* ignored */}
+    }
             return true;
         }catch(SQLException e){
             System.out.println("Error insertar: "+e);
@@ -103,6 +118,11 @@ public class Conexion {
         try{
             stmt = conn.createStatement();
             stmt.executeUpdate(query);
+            if (conn != null) {
+        try {
+            conn.close();
+        } catch (SQLException e) { /* ignored */}
+    }
             return true;
         }catch(SQLException e){
             System.out.println("Error insertar: "+e);
