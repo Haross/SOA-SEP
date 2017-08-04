@@ -15,11 +15,11 @@ import org.netbeans.xml.schema.capacitacionschema.Capacitaciones;
 
 /**
  *
- * @author Josseline Arreola
+ * @author Javier
  */
-@WebService(serviceName = "CapacitacionWSDLService", portName = "CapacitacionWSDLPort", endpointInterface = "org.netbeans.j2ee.wsdl.soa_sep.capacitacion.capacitacionwsdl.CapacitacionWSDLPortType", targetNamespace = "http://j2ee.netbeans.org/wsdl/SOA-SEP/Capacitacion/CapacitacionWSDL", wsdlLocation = "WEB-INF/wsdl/CapacitacionService/CapacitacionWSDL.wsdl")
-public class CapacitacionService {
-     Conexion con = new Conexion();
+@WebService(serviceName = "CapacitacionWSDLService", portName = "CapacitacionWSDLPort", endpointInterface = "org.netbeans.j2ee.wsdl.soa_sep.capacitacion.capacitacionwsdl.CapacitacionWSDLPortType", targetNamespace = "http://j2ee.netbeans.org/wsdl/SOA-SEP/Capacitacion/CapacitacionWSDL", wsdlLocation = "WEB-INF/wsdl/CapacitacionServicio/CapacitacionWSDL.wsdl")
+public class CapacitacionServicio {
+Conexion con = new Conexion();
     public org.netbeans.xml.schema.capacitacionschema.CapacitacionNom capacitacionNombre(java.lang.String nombre) {
         String query = "select * from capacitaciones where nombre = '"+nombre+"';";
             ResultSet rs = con.select(query);
@@ -44,7 +44,7 @@ public class CapacitacionService {
     }
 
     public org.netbeans.xml.schema.capacitacionschema.Capacitacion capacitacionTipo(java.lang.String tipo) {
-       String query = "select * from capacitaciones where tipo = '"+tipo+"';";
+        String query = "select * from capacitaciones where tipo = '"+tipo+"';";
             ResultSet rs = con.select(query);
             try {
                 

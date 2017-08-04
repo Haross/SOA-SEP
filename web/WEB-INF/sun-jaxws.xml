@@ -5,5 +5,6 @@
   <endpoint implementation="utilitarios.Publicar.PublicarService" name="PublicarWSDLService" url-pattern="/PublicarWSDLService"/>
   <endpoint implementation="entidad.clubDeLectura.ClubDeLecturaService" name="ClubDeLecturaWSDLService" url-pattern="/ClubDeLecturaWSDLService"/>
   <endpoint implementation="utilitarios.Notificacion.NotificacionWSDL" name="NotificacionWSDL" url-pattern="/NotificacionWSDL"/>
-  <endpoint implementation="entidad.Capacitacion.CapacitacionService" name="CapacitacionWSDLService" url-pattern="/CapacitacionWSDLService"/>
+  <endpoint implementation="utilitarios.login.loginService" name="Login" url-pattern="/Login"/>
+  <endpoint implementation="entidad.Capacitacion.CapacitacionServicio" name="CapacitacionWSDLService" url-pattern="/CapacitacionWSDLService"/>
 </endpoints>

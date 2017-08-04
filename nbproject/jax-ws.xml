@@ -161,9 +161,41 @@
         </wsimport-option>
       </wsimport-options>
     </service>
-    <service name="CapacitacionService">
-      <implementation-class>entidad.Capacitacion.CapacitacionService</implementation-class>
-      <wsdl-url>file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/Final/SOA-SEP/src/java/entidad/Capacitacion/CapacitacionWSDL.wsdl</wsdl-url>
+    <service name="loginService">
+      <implementation-class>utilitarios.login.loginService</implementation-class>
+      <wsdl-url>file:/D:/Users/Javier/Documents/NetBeansProjects/SOA-new/SOA-SEP/src/java/utilitarios/login/LoginWSDL.wsdl</wsdl-url>
+      <local-wsdl-file>LoginWSDL.wsdl</local-wsdl-file>
+      <service-name>Login</service-name>
+      <port-name>LoginWSDLPort</port-name>
+      <package-name>org.netbeans.j2ee.wsdl.soa_sep.login.loginwsdl</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <use-provider>false</use-provider>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </service>
+    <service name="CapacitacionServicio">
+      <implementation-class>entidad.Capacitacion.CapacitacionServicio</implementation-class>
+      <wsdl-url>file:/D:/Users/Javier/Documents/NetBeansProjects/SOA-new/SOA-SEP/src/java/entidad/Capacitacion/CapacitacionWSDL.wsdl</wsdl-url>
       <local-wsdl-file>CapacitacionWSDL.wsdl</local-wsdl-file>
       <service-name>CapacitacionWSDLService</service-name>
       <port-name>CapacitacionWSDLPort</port-name>

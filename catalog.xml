@@ -12,4 +12,8 @@
     <system systemId="file:/C:/Users/Jesus/Documents/NetBeansProjects/SOA-SEP/src/java/utilitarios/Notificacion/NotificacionSchema.xsd" uri="src/conf/xml-resources/web-services/NotificacionWSDL/wsdl/NotificacionSchema.xsd"/>
     <system systemId="file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/Final/SOA-SEP/src/java/entidad/Capacitacion/CapacitacionWSDL.wsdl" uri="src/conf/xml-resources/web-services/CapacitacionService/wsdl/CapacitacionWSDL.wsdl"/>
     <system systemId="file:/C:/Users/Josseline%20Arreola/Documents/9oCuatri/SOA/Corte3/Final/SOA-SEP/src/java/entidad/Capacitacion/CapacitacionSchema.xsd" uri="src/conf/xml-resources/web-services/CapacitacionService/wsdl/CapacitacionSchema.xsd"/>
+    <system systemId="file:/D:/Users/Javier/Documents/NetBeansProjects/SOA-new/SOA-SEP/src/java/utilitarios/login/LoginWSDL.wsdl" uri="src/conf/xml-resources/web-services/LoginService/wsdl/LoginWSDL.wsdl"/>
+    <system systemId="file:/D:/Users/Javier/Documents/NetBeansProjects/SOA-new/SOA-SEP/src/java/utilitarios/login/LoginSchema.xsd" uri="src/conf/xml-resources/web-services/LoginService/wsdl/LoginSchema.xsd"/>
+    <system systemId="file:/D:/Users/Javier/Documents/NetBeansProjects/SOA-new/SOA-SEP/src/java/entidad/Capacitacion/CapacitacionWSDL.wsdl" uri="src/conf/xml-resources/web-services/CapacitacionServicio/wsdl/CapacitacionWSDL.wsdl"/>
+    <system systemId="file:/D:/Users/Javier/Documents/NetBeansProjects/SOA-new/SOA-SEP/src/java/entidad/Capacitacion/CapacitacionSchema.xsd" uri="src/conf/xml-resources/web-services/CapacitacionServicio/wsdl/CapacitacionSchema.xsd"/>
 </catalog>
